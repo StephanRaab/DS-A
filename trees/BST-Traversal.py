@@ -19,3 +19,11 @@ def postorder(root):
     postorder(root.left)
     postorder(root.right)
     print(root.val)
+
+# sorting in descending or reversed order from inorder
+def descending(root):
+    if not root:
+        return
+    descending(root.right)
+    print(root.val)
+    descending(root.left)
