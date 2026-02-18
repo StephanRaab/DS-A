@@ -40,3 +40,18 @@ function twoSumOptimization(nums, target){
         }
     }
 }
+
+// put everything in single loop, time complexity is the same, and this is perhaps less understandable
+function twoSumShortest(nums, target){
+    const numberToIndex = {};
+
+    for (let i = 0; i < nums.length; i++){
+        let targetNum = target - nums[i];
+
+        if (numberToIndex[targetNum] !== undefined) {
+            return [i, numberToIndex[targetNum]];
+        }
+
+        numberToIndex[nums[i]] = i;
+    }
+}
