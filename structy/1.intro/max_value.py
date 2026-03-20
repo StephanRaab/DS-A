@@ -8,3 +8,5 @@ def max_value(nums):
             res = num
 
     return res
+
+max_value([4, 7, 2, 8, 10, 9]) # -> 10

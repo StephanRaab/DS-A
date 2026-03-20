@@ -11,3 +11,5 @@ def longest_word(sentence):
             longest = word
 
     return longest
+
+longest_word("what a wonderful world") # -> "wonderful"
