@@ -40,6 +40,10 @@ def intersectionSet(a, b):
 
   return res  
 
+def superShortIntersection(a,b):
+    items = set(a)
+    return [el for el in b if el in items]
+
 intersection([4,2,1,6], [3,6,9,2,10]) # -> [2,6]
 intersection([4,2,1], [1,2,4,6]) # -> [1,2,4]
 intersection([0,1,2], [10,11]) # -> []
