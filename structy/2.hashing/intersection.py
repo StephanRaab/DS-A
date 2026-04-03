@@ -17,6 +17,23 @@ def intersection(a, b):
 
   return res
 
+def intersectionSet(a, b): 
+  res = []
+  items = set()
+
+  for item in a:
+    items.add(item)
+
+  for num in b:
+    if num in items:
+      res.append(num)
+
+  return res
+
 intersection([4,2,1,6], [3,6,9,2,10]) # -> [2,6]
 intersection([4,2,1], [1,2,4,6]) # -> [1,2,4]
 intersection([0,1,2], [10,11]) # -> []
+
+intersectionSet([4,2,1,6], [3,6,9,2,10]) # -> [2,6]
+intersectionSet([4,2,1], [1,2,4,6]) # -> [1,2,4]
+intersectionSet([0,1,2], [10,11]) # -> []
